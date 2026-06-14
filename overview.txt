@@ -1,0 +1,122 @@
+PROJECT OVERVIEW
+================
+
+Project Title: Online Gaming Website (Rockstar Games Clone)
+Category: Web Development
+Reference Website: https://www.rockstargames.com
+
+
+1. PROJECT PURPOSE
+------------------
+
+The purpose of this project is to design and develop a fully functional online gaming website modelled after Rockstar Games (rockstargames.com). The website serves as a centralized digital hub for a gaming studio, enabling users to explore a curated library of game titles, read the latest news and announcements, watch official trailers and gameplay videos, access community features, manage player profiles, and purchase games and merchandise. The finished product must be a visually rich, immersive, and production-grade web experience that mirrors the premium aesthetic standards established by AAA gaming studio websites.
+
+
+2. PRODUCT SUMMARY
+------------------
+
+The website is a multi-page, responsive web application structured around the following core sections:
+
+  - Homepage with a hero carousel showcasing featured game titles, trailers, and announcements
+  - Games Library page listing all studio titles with filtering by franchise, platform, and release year
+  - Individual Game Detail pages with trailers, screenshots, descriptions, system requirements, and purchase links
+  - Newswire (Blog) section for publishing news articles, patch notes, event updates, and community highlights
+  - Videos page hosting official trailers, gameplay footage, and behind-the-scenes content
+  - Store section for purchasing games, apparel, collectibles, and accessories
+  - User Account system with registration, login, profile management, game stats tracking, and career progression
+  - Support portal with searchable help articles, ticket submission, and live service status
+  - Downloads page for launchers, wallpapers, and promotional assets
+  - About page with studio history, team information, and career opportunities
+  - Global navigation bar with centred studio logo, search functionality, and responsive mobile menu
+  - Footer with legal links, social media icons, privacy policy, terms of service, and newsletter signup
+
+
+3. TARGET AUDIENCE
+------------------
+
+Primary Audience:
+  - Gamers aged 16 to 40 who play AAA open-world, action-adventure, and multiplayer online games
+  - Existing players of franchise titles such as Grand Theft Auto, Red Dead Redemption, and Max Payne
+  - Esports and competitive gaming community members
+
+Secondary Audience:
+  - Gaming journalists and content creators seeking official assets, press kits, and announcements
+  - Game developers and designers researching industry-standard web presentation
+  - Potential job applicants interested in studio career opportunities
+
+Tertiary Audience:
+  - Investors, partners, and stakeholders reviewing the studio's digital presence and product portfolio
+
+
+4. CORE FUNCTIONALITY
+---------------------
+
+  4.1  Hero Carousel
+       - Full-width, auto-rotating carousel on the homepage featuring high-resolution key art, embedded video trailers, and call-to-action buttons for each featured title
+       - Manual navigation via clickable indicators and swipe gestures on mobile
+       - Supports a minimum of 5 slides with configurable rotation interval
+
+  4.2  Games Library
+       - Grid or tile-based layout displaying all game titles with cover art thumbnails
+       - Filtering by franchise (e.g., GTA, Red Dead, Max Payne), platform (PC, PlayStation, Xbox, Mobile), and release year
+       - Sorting by newest, oldest, or alphabetical order
+       - Each tile links to the individual game detail page
+
+  4.3  Game Detail Pages
+       - Dynamic pages generated for each title featuring:
+         - Hero banner with key art or embedded trailer
+         - Game description and storyline synopsis
+         - Feature highlights with supporting media
+         - Screenshot gallery with lightbox viewer
+         - System requirements table (PC titles)
+         - Platform availability badges
+         - Purchase / pre-order buttons linking to storefronts
+         - Related news articles from the Newswire
+
+  4.4  Newswire (Blog)
+       - Paginated, filterable news feed with category tags (Updates, Events, Patch Notes, Community)
+       - Individual article pages with rich text content, embedded media, and social sharing buttons
+       - Sidebar or inline widgets displaying trending articles and related game links
+
+  4.5  Video Hub
+       - Grid layout of video thumbnails with play-on-click modal or embedded player
+       - Filtering by game title and video type (Trailer, Gameplay, Behind the Scenes)
+       - Responsive video player supporting multiple resolutions
+
+  4.6  Store
+       - Product catalog with categories: Games, Apparel, Collectibles, Accessories
+       - Individual product pages with images, descriptions, pricing, and add-to-cart functionality
+       - Shopping cart with quantity management and checkout flow
+       - Integration points for payment processing (Stripe or PayPal)
+
+  4.7  User Account System
+       - Registration with email and password, including email verification
+       - Login with session management using JWT or secure cookies
+       - User profile dashboard displaying owned games, play statistics, achievements, and career progression
+       - Avatar upload and profile customization
+       - Password reset and account settings management
+
+  4.8  Support Portal
+       - Searchable knowledge base with categorized help articles
+       - Ticket submission form with category selection, description field, and file attachment
+       - Live service status dashboard showing server health for each online game
+       - FAQ section with collapsible accordion interface
+
+  4.9  Search
+       - Global search bar accessible from the navigation bar on all pages
+       - Search results filtered by content type: Games, News, Videos, Support Articles
+       - Auto-complete suggestions as the user types
+
+  4.10 Responsive Design
+       - Fully responsive layout optimized for desktop (1920px), tablet (768px), and mobile (375px) viewports
+       - Mobile hamburger menu with slide-out navigation
+       - Touch-friendly carousels, galleries, and interactive elements
+
+  4.11 Performance and SEO
+       - Server-side rendering or static site generation for fast initial page loads
+       - Image optimization with lazy loading and WebP format support
+       - Structured metadata (Open Graph, Twitter Cards) on all pages
+       - Sitemap generation and robots.txt configuration
+
+
+END OF OVERVIEW

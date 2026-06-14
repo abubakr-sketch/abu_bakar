@@ -1,0 +1,426 @@
+EVALUATION RUBRICS
+==================
+
+Project Title: Online Gaming Website (Rockstar Games Clone)
+Category: Web Development
+Reference Website: https://www.rockstargames.com
+Budget Tier: Medium
+Complexity Level: High
+
+
+========================================================================
+SCORING GUIDE
+========================================================================
+
+Each rubric category is scored on a 1–5 scale:
+
+  5 — Exceptional: Exceeds all expectations. Production-ready quality.
+  4 — Proficient: Meets all requirements with minor polish opportunities.
+  3 — Competent: Meets most requirements. Some gaps or rough edges.
+  2 — Developing: Partially meets requirements. Significant issues present.
+  1 — Inadequate: Does not meet minimum requirements. Major gaps or failures.
+
+
+========================================================================
+CATEGORY 1: INSTRUCTION FOLLOWING (Weight: 15%)
+========================================================================
+
+Measures adherence to the requirements defined in instruction.md.
+
+Score 5 — Exceptional:
+  - All 31 deliverables are present and fully implemented
+  - File and folder naming conventions match the specification exactly
+  - Tech stack matches all requirements (Next.js 14+, TypeScript, MongoDB, Stripe, NextAuth)
+  - CSS Custom Properties used for all design tokens with no hard-coded values
+  - All page routes match the specified URL structure exactly
+  - .env.example is present with all required variables documented
+  - README.md contains complete setup instructions
+
+Score 4 — Proficient:
+  - 28–30 deliverables are implemented
+  - Minor deviations from naming conventions (1–2 files)
+  - Tech stack is correct with minor version differences
+  - Most design tokens use CSS Custom Properties with 1–3 hard-coded exceptions
+  - All critical page routes are correct
+
+Score 3 — Competent:
+  - 22–27 deliverables are implemented
+  - Some naming convention deviations (3–5 files)
+  - Core tech stack is correct but 1–2 specified packages are substituted
+  - Mix of CSS Custom Properties and hard-coded values
+  - Most page routes match specification
+
+Score 2 — Developing:
+  - 15–21 deliverables are implemented
+  - Naming conventions are frequently inconsistent
+  - Major tech stack deviation (e.g., different framework or database)
+  - Hard-coded values used throughout
+  - Several page routes differ from specification
+
+Score 1 — Inadequate:
+  - Fewer than 15 deliverables are implemented
+  - Little adherence to naming conventions
+  - Tech stack does not match specification
+  - No design token system
+  - Route structure does not match specification
+
+
+========================================================================
+CATEGORY 2: FEATURE COMPLETENESS (Weight: 20%)
+========================================================================
+
+Measures implementation coverage of all specified features.
+
+Score 5 — Exceptional:
+  - Homepage: Hero carousel with 5+ slides, auto-rotation, manual navigation, latest news grid, flagship sections with parallax, newsletter signup all functional
+  - Games: Library with filtering (franchise, platform, year), sorting (4 options), game detail pages with hero, overview, gallery with lightbox, system requirements, related news
+  - Newswire: Category tabs, paginated article list, article detail with rich text, social sharing, related articles
+  - Videos: Filter by game and type, modal player, keyboard accessible
+  - Store: Product catalog with categories, product detail with image zoom and variant selectors, cart with persistence, checkout with Stripe test payment, order confirmation
+  - Account: Registration with email verification, login with JWT, profile dashboard with stats, settings with password change and account deletion, password reset flow
+  - Support: Landing with search and categories, help articles with feedback, ticket submission with file upload, service status with indicators, FAQ accordion
+  - Search: Global autocomplete after 3 characters, tabbed results page, debounced API calls
+  - Additional: About page, downloads page, global navbar with search, footer with newsletter
+
+Score 4 — Proficient:
+  - All major feature areas (Homepage, Games, Newswire, Videos, Store, Account, Support, Search) are present and functional
+  - 1–3 minor sub-features are missing or incomplete (e.g., parallax effect, image zoom, autocomplete)
+  - Core user flows (browse games, read news, buy product, create account, submit ticket) work end to end
+
+Score 3 — Competent:
+  - 6 of 8 major feature areas are present and functional
+  - Multiple sub-features are missing or only partially implemented
+  - Core user flows work but with some rough edges (e.g., cart doesn't persist, no email verification)
+
+Score 2 — Developing:
+  - 4–5 of 8 major feature areas are present
+  - Significant features are missing (e.g., entire store or account system)
+  - Some core user flows are broken or incomplete
+
+Score 1 — Inadequate:
+  - Fewer than 4 major feature areas are present
+  - Website is primarily static with minimal interactivity
+  - Core user flows are non-functional
+
+
+========================================================================
+CATEGORY 3: UI/UX QUALITY (Weight: 15%)
+========================================================================
+
+Measures design quality, visual fidelity, and user experience.
+
+Score 5 — Exceptional:
+  - Dark theme is consistent across all pages matching the specified colour palette
+  - Typography matches specification (Roboto Condensed for headings, Inter for body)
+  - Spacing follows the defined 4px base scale consistently
+  - All interactive elements have smooth hover transitions (200ms ease-out)
+  - Hero carousel transitions are fluid (800ms crossfade)
+  - Game cards have the specified hover effects (5% scale, border glow, fade-in button)
+  - Modals (lightbox, video, confirmation) open/close smoothly with backdrop
+  - Empty states and loading states are designed (skeleton loaders, empty cart illustration)
+  - Navigation is intuitive with clear visual hierarchy
+  - Premium, cinematic feel matching the reference website's quality level
+  - Forms have real-time validation with inline error messages
+
+Score 4 — Proficient:
+  - Dark theme is consistent with minor inconsistencies (1–2 pages)
+  - Typography is correct for most elements
+  - Hover effects and animations are present and smooth
+  - Most interactive elements feel polished
+  - Loading and empty states are handled
+
+Score 3 — Competent:
+  - Dark theme is present but inconsistent in places (3–5 elements)
+  - Typography partially matches specification
+  - Some hover effects are missing or abrupt
+  - Basic loading states but no skeleton loaders
+  - Overall design is functional but lacks premium feel
+
+Score 2 — Developing:
+  - Theme is partially implemented with visible inconsistencies
+  - Default or mismatched typography
+  - Few or no hover effects or animations
+  - No loading or empty states
+  - Design feels unfinished or prototype-like
+
+Score 1 — Inadequate:
+  - No consistent theme or colour system
+  - Default browser styling visible
+  - No animations or transitions
+  - Design is visually broken or unappealing
+
+
+========================================================================
+CATEGORY 4: TECHNICAL QUALITY (Weight: 15%)
+========================================================================
+
+Measures architecture, code quality, and engineering standards.
+
+Score 5 — Exceptional:
+  - TypeScript is used consistently across all files with strict mode enabled
+  - Components are modular, reusable, and follow single-responsibility principle
+  - Folder structure matches the specification exactly
+  - Server components and client components are correctly distinguished (Next.js App Router)
+  - API routes return proper HTTP status codes (200, 201, 400, 401, 404, 500)
+  - Authentication uses secure practices (bcrypt 12 rounds, HTTP-only cookies, token expiry)
+  - Database models use proper Mongoose schemas with validation
+  - Environment variables are used for all secrets and configuration
+  - Code is consistently formatted (Prettier) and linted (ESLint) with no errors
+  - Separation of concerns: data fetching in server components/API routes, UI in client components
+  - Custom hooks abstract reusable logic (useSearch, useCart, useAuth)
+  - Error boundaries handle component failures gracefully
+
+Score 4 — Proficient:
+  - TypeScript is used with minor type safety gaps (1–3 files with 'any')
+  - Components are well-organized with clear separation
+  - API routes work correctly with proper status codes
+  - Authentication is secure with minor improvements possible
+  - Code is clean and readable with consistent formatting
+
+Score 3 — Competent:
+  - TypeScript is used but with frequent 'any' types or missing interfaces
+  - Components are mostly organized but some are oversized or tightly coupled
+  - API routes work but may not handle all error cases
+  - Authentication works but has some security gaps (e.g., weak password requirements)
+  - Code formatting is inconsistent in places
+
+Score 2 — Developing:
+  - Mix of TypeScript and JavaScript, or TypeScript with many errors suppressed
+  - Poor component organization with duplicated code
+  - API routes have limited error handling
+  - Authentication has significant security issues
+  - No linting or formatting configuration
+
+Score 1 — Inadequate:
+  - No TypeScript or TypeScript is misconfigured
+  - Monolithic components with no separation of concerns
+  - API routes are broken or missing
+  - No authentication or fundamentally insecure implementation
+  - Code is disorganized and difficult to understand
+
+
+========================================================================
+CATEGORY 5: PERFORMANCE (Weight: 10%)
+========================================================================
+
+Measures responsiveness, optimization, and load times.
+
+Score 5 — Exceptional:
+  - Lighthouse Performance score >= 90 on all pages
+  - First Contentful Paint (FCP) <= 1.5 seconds
+  - Largest Contentful Paint (LCP) <= 2.5 seconds
+  - Cumulative Layout Shift (CLS) <= 0.1
+  - All images use Next.js Image component with lazy loading and WebP optimization
+  - JavaScript bundle is code-split per route with no single bundle exceeding 200KB gzipped
+  - Font loading uses display: swap to prevent render blocking
+  - API responses return within 300ms
+  - Database queries use indexed fields for all search and filter operations
+  - No unnecessary re-renders in React components (verified with React DevTools)
+
+Score 4 — Proficient:
+  - Lighthouse Performance score >= 80
+  - LCP <= 3.0 seconds
+  - Most images are optimized and lazy-loaded
+  - Code splitting is implemented
+  - API responses are generally fast with occasional slow queries
+
+Score 3 — Competent:
+  - Lighthouse Performance score >= 60
+  - LCP <= 4.0 seconds
+  - Some images are optimized, others are uncompressed or not lazy-loaded
+  - Partial code splitting
+  - Some API endpoints are slow (> 500ms)
+
+Score 2 — Developing:
+  - Lighthouse Performance score 40–59
+  - LCP > 4.0 seconds
+  - Images are not optimized (large file sizes, no lazy loading)
+  - No code splitting, large JavaScript bundles
+  - API responses are frequently slow
+
+Score 1 — Inadequate:
+  - Lighthouse Performance score < 40
+  - Page loads take more than 6 seconds
+  - Unoptimized assets throughout
+  - Render-blocking resources
+  - Application feels sluggish and unresponsive
+
+
+========================================================================
+CATEGORY 6: DOCUMENTATION (Weight: 5%)
+========================================================================
+
+Measures clarity and completeness of project documentation.
+
+Score 5 — Exceptional:
+  - README.md includes:
+    - Project description and feature list
+    - Screenshots or demo link
+    - Prerequisites (Node.js version, MongoDB, etc.)
+    - Step-by-step installation instructions
+    - Environment variable setup guide with .env.example
+    - Database seeding command and instructions
+    - Available npm scripts (dev, build, test, lint, seed)
+    - Deployment instructions
+    - API endpoint documentation (routes, methods, request/response formats)
+  - Code comments explain complex business logic and non-obvious decisions
+  - TypeScript interfaces are self-documenting with JSDoc comments on complex types
+  - CHANGELOG.md tracks version changes (if applicable)
+
+Score 4 — Proficient:
+  - README.md covers installation, setup, and running instructions
+  - .env.example is present with all variables
+  - Most complex code sections have comments
+  - API endpoints are briefly documented
+
+Score 3 — Competent:
+  - README.md has basic setup instructions
+  - .env.example is present but incomplete
+  - Minimal code comments
+  - No API documentation
+
+Score 2 — Developing:
+  - README.md exists but is sparse or generic
+  - No .env.example
+  - No code comments
+  - No additional documentation
+
+Score 1 — Inadequate:
+  - No README.md or empty README
+  - No documentation of any kind
+  - No .env.example or setup guidance
+
+
+========================================================================
+CATEGORY 7: DEPLOYMENT AND BUILD QUALITY (Weight: 10%)
+========================================================================
+
+Measures readiness of the submitted build for deployment.
+
+Score 5 — Exceptional:
+  - `next build` completes with zero errors and zero warnings
+  - `next lint` passes with zero errors
+  - All TypeScript type checks pass (`tsc --noEmit`)
+  - Production build is tested and verified to run correctly via `next start`
+  - Environment variables are properly configured for production (no localhost URLs or test keys exposed)
+  - .gitignore correctly excludes node_modules, .env.local, .next, and build artifacts
+  - Package.json has correct scripts: dev, build, start, lint, seed
+  - No console.log or debug statements remain in production code
+  - Seed script populates the database correctly with sample data for all models
+  - Application starts cleanly on a fresh clone with only documented setup steps
+
+Score 4 — Proficient:
+  - Build completes with minor warnings (no errors)
+  - Lint passes with minor warnings
+  - Application runs correctly in production mode
+  - 1–2 minor issues (e.g., a console.log left in, a missing .gitignore entry)
+
+Score 3 — Competent:
+  - Build completes but with several warnings
+  - Some lint errors present but not blocking
+  - Application runs but with some console errors or missing data
+  - Setup requires undocumented steps
+
+Score 2 — Developing:
+  - Build has errors that require manual fixing
+  - Multiple lint errors
+  - Application does not run correctly in production mode without troubleshooting
+  - Missing or broken seed script
+
+Score 1 — Inadequate:
+  - Build fails
+  - Application cannot be started
+  - Missing critical dependencies or configuration
+  - Project does not run on a fresh setup
+
+
+========================================================================
+CATEGORY 8: EDGE CASE HANDLING (Weight: 10%)
+========================================================================
+
+Measures robustness, error handling, and resilience.
+
+Score 5 — Exceptional:
+  - Form validation handles all edge cases:
+    - Empty submissions show all field errors simultaneously
+    - Excessively long input is truncated or rejected with clear feedback
+    - SQL injection and XSS attempts are sanitized
+    - Duplicate email registration shows a clear "email already in use" error
+    - Password strength requirements enforced with real-time feedback
+  - Authentication edge cases:
+    - Expired verification tokens show "link expired" with a "resend" option
+    - Expired password reset tokens handled gracefully
+    - Concurrent session management (login on multiple devices)
+    - Invalid or tampered JWT tokens return 401 without crashing
+  - Store edge cases:
+    - Adding quantity beyond available stock shows an error
+    - Cart handles items that become unavailable (product removed/out of stock)
+    - Checkout handles payment failures with clear user messaging
+    - Empty cart redirects away from checkout
+  - UI edge cases:
+    - Images that fail to load show a styled fallback placeholder
+    - Very long titles or descriptions are truncated with ellipsis and tooltip
+    - Search with no results shows a helpful "no results" state with suggestions
+    - Empty data states handled for all lists (no games, no articles, no orders)
+  - API edge cases:
+    - Malformed request bodies return 400 with descriptive error messages
+    - Unauthenticated requests to protected routes return 401
+    - Non-existent resources return 404
+    - Server errors return 500 with a generic user-friendly message (no stack traces)
+    - Rate limiting on authentication endpoints (max 5 login attempts per minute per IP)
+
+Score 4 — Proficient:
+  - Form validation handles common edge cases (empty fields, wrong format, duplicates)
+  - Authentication errors are handled gracefully
+  - Store handles basic edge cases (empty cart, payment failure)
+  - API returns proper error codes for most scenarios
+  - 1–2 minor edge cases not handled
+
+Score 3 — Competent:
+  - Basic form validation is present (required fields, email format)
+  - Authentication works but edge cases may cause confusing errors
+  - Store handles the happy path but some error states are unhandled
+  - API returns errors but messages are not always helpful
+
+Score 2 — Developing:
+  - Form validation is minimal (only required fields)
+  - Authentication errors may crash the application or show raw error messages
+  - Store does not handle edge cases (e.g., empty cart goes to checkout)
+  - API error handling is inconsistent
+
+Score 1 — Inadequate:
+  - No form validation
+  - Authentication failures crash the application
+  - No error handling in the store flow
+  - API errors expose stack traces or raw database errors
+
+
+========================================================================
+TOTAL SCORE CALCULATION
+========================================================================
+
+  Category 1: Instruction Following      × 0.15 = ___
+  Category 2: Feature Completeness       × 0.20 = ___
+  Category 3: UI/UX Quality              × 0.15 = ___
+  Category 4: Technical Quality           × 0.15 = ___
+  Category 5: Performance                 × 0.10 = ___
+  Category 6: Documentation              × 0.05 = ___
+  Category 7: Deployment & Build Quality  × 0.10 = ___
+  Category 8: Edge Case Handling          × 0.10 = ___
+                                          ___________
+  WEIGHTED TOTAL (out of 5.00)           = ___
+
+
+========================================================================
+GRADE THRESHOLDS
+========================================================================
+
+  4.50 – 5.00  |  Outstanding   |  Exceeds all expectations
+  4.00 – 4.49  |  Excellent     |  Meets all requirements with high quality
+  3.50 – 3.99  |  Good          |  Meets most requirements competently
+  3.00 – 3.49  |  Acceptable    |  Meets minimum requirements
+  2.00 – 2.99  |  Needs Work    |  Significant improvements required
+  1.00 – 1.99  |  Unacceptable  |  Does not meet minimum standards
+
+
+END OF RUBRICS
